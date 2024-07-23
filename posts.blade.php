@@ -1,4 +1,7 @@
-<?php exportAssets(); ?>
+<?php
+exportAssets();
+$defaults = getThemeDefaults();
+?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -24,9 +27,23 @@
             </div>
 
             <div class="flex flex-col gap-16">
+                {{-- Hero --}}
+                <div class="body-margin flex flex-wrap gap-24 justify-between items-center">
+                    <div class="flex flex-1 flex-col gap-8">
+                        <span class="noto-sans-display-font text-4xl">{{settings('r', 'general.name')}}</span>
+                        <span class="noto-sans-display-font font-bold">{{$defaults['tag-line']}}</span>
+                        <span class="">{{$defaults['user-bio']}}</span>
+                    </div>
+                    <div class="w-full flex-1 h-64 overflow-hidden">
+                        <img
+                            src="{{homeUrl('/assets/img/profile-picture.jpg', 0)}}"
+                            alt="{{Auth::user()->name}}"
+                            style="width: 100%; height: 100%; object-position: center; object-fit: cover;">
+                    </div>
+                </div>
                 {{-- Main section --}}
                 <div class="body-margin">
-                    <div class="flex flex-wrap gap-16 justify-between mt-16">
+                    <div class="flex flex-wrap gap-16 justify-between">
                         {{-- Post content --}}
                         <div class="posts-list">
                             @foreach ($posts as $post)

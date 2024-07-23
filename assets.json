@@ -2,6 +2,7 @@
     "assets": [
         "assets/css/style.css",
         "assets/js/script.js",
-        "assets/img/logo.svg"
+        "assets/img/logo.svg",
+        "assets/img/profile-picture.jpg"
     ]
 }

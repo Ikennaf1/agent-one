@@ -70,7 +70,7 @@ body {
 }
 
 .nav-move-top {
-    @apply flex items-center justify-center text-lg rounded w-12 h-12 bg-[#040c14];
+    @apply flex items-center justify-center text-lg rounded w-12 h-12 bg-black;
 }
 
 .nav {
@@ -134,7 +134,7 @@ body {
 }
 
 .posts-list {
-    @apply w-full md:w-[70%] flex gap-16 md:gap-20 flex-wrap;
+    @apply w-full md:w-[70%] flex gap-24 md:gap-20 flex-wrap;
 }
 
 .post-container {

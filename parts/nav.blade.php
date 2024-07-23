@@ -12,7 +12,7 @@
         <div class="">
             <div class="body-margin flex h-36 primary-text-color justify-between items-center noto-sans-display-font">
                 <div class="">
-                    <a href="{{ homeUrl() }}" class="flex items-center gap-8 text-xl uppercase">
+                    <a href="{{ homeUrl() }}" class="flex link items-center gap-8 text-xl uppercase">
                         <div class="w-20 h-20">
                             <?php include_once './assets/img/logo.svg'; ?>
                         </div>
