@@ -1,3 +1,4 @@
+<?php exportAssets(); ?>
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -15,11 +16,11 @@
             {{-- Nav --}}
             <div>
                 @include('front.parts.nav')
-                <div class="header-img">
+                {{-- <div class="header-img">
                     <img src="{{ homeUrl("/assets/img/pexels--931887.jpg", 0) }}"
                     style="width: 100%; height: 100%; object-position: center; object-fit: cover;"
                     alt="Header Image" />
-                </div>
+                </div> --}}
             </div>
 
             <div class="flex flex-col gap-16">

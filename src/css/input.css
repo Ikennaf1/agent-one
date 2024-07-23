@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,13 +10,23 @@
 }
 
 :root {
-    font-family: 'Josefin Sans', sans-serif;
-    --primary-color: #f87060;
-    --secondary-color: #102542;
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    --primary-color: #b4ad61;
+    --primary-color-hover: #777340;
+    --secondary-color: #b4ad61;
+    --secondary-color-hover: #777340;
 }
 
+.noto-sans-display-font {
+    font-family: "Noto Sans Display", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
 .body-margin {
-    @apply xl:mx-64 lg:mx-32 md:mx-16 sm:mx-8 mx-4;
+    @apply lg:mx-32 md:mx-16 sm:mx-8 mx-4;
 }
 
 .body-bg {
@@ -35,19 +46,55 @@ body {
 }
 
 .link {
-    @apply text-secondary-color font-bold hover:text-black transition duration-500;
+    @apply text-primary-color hover:text-primary-color-hover transition duration-500;
+}
+
+.primary-text-color {
+    @apply text-primary-color;
+}
+
+.primary-text-color a {
+    @apply text-primary-color hover:text-primary-color-hover transition ease-in-out duration-500;
+}
+
+.primary-bg-color {
+    @apply bg-primary-color;
+}
+
+.nav-fixed-bottom {
+    @apply fixed bottom-4 right-4 md:bottom-8 md:right-8 z-40 flex flex-col gap-4 items-center justify-between w-12 md:w-16 overflow-hidden;
+}
+
+.nav-fixed-bottom * {
+    @apply opacity-50 hover:opacity-100 transition ease-in-out duration-500 cursor-pointer text-white;
+}
+
+.nav-move-top {
+    @apply flex items-center justify-center text-lg rounded w-12 h-12 bg-[#040c14];
 }
 
 .nav {
-    @apply fixed z-30 w-full border-b border-primary-color body-bg;
+    @apply z-30 w-full body-bg noto-sans-display-font;
+}
+
+.tag-line {
+    @apply hidden md:block font-bold;
+}
+
+.nav-menu-container {
+    @apply w-full flex justify-between items-center h-24 bg-primary-color;
+}
+
+.nav-menu {
+    @apply w-full flex items-center justify-end md:justify-start;
 }
 
 .menu-item {
-    @apply text-secondary-color font-bold hover:text-black transition duration-500;
+    @apply text-white hover:text-white/50 transition duration-500;
 }
 
 .menu-item-mobile {
-    @apply text-primary-color font-bold;
+    @apply text-white;
 }
 
 .menu-bar {
@@ -55,11 +102,11 @@ body {
 }
 
 .menu-mobile-btn {
-    @apply block md:hidden;
+    @apply block md:hidden text-white cursor-pointer text-right;
 }
 
 .nav-collapse {
-    @apply md:hidden right-0 w-3/4 h-screen z-40 bg-secondary-color p-3 font-light;
+    @apply noto-sans-display-font md:hidden top-0 right-0 w-3/4 h-screen z-40 bg-primary-color p-3 font-light;
 }
 
 .nav-collapsed {
@@ -133,7 +180,7 @@ body {
 }
 
 .post-list-footer span {
-    @apply text-xs py-2 px-4 font-bold border rounded border-primary-color text-primary-color hover:border-secondary-color hover:text-secondary-color transition duration-500;
+    @apply text-xs py-2 px-4 font-bold border rounded border-primary-color text-primary-color hover:border-primary-color hover:text-primary-color transition duration-500;
 }
 
 .post-list-footer-sm {
@@ -141,7 +188,7 @@ body {
 }
 
 .post-list-footer-sm span {
-    @apply text-xs py-2 px-4 font-bold border rounded border-primary-color text-primary-color hover:border-secondary-color hover:text-secondary-color transition duration-500;
+    @apply text-xs py-2 px-4 font-bold border rounded border-primary-color text-primary-color hover:border-primary-color hover:text-primary-color transition duration-500;
 }
 
 .sidebar {
