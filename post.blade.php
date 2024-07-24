@@ -22,7 +22,7 @@
             <div class="flex flex-col gap-16">
                 {{-- Main section --}}
                 <div class="body-margin">
-                    <div class="flex flex-wrap gap-16 justify-between mt-16">
+                    <div class="flex flex-wrap gap-16 justify-between">
                         {{-- Post content --}}
                         <div class="post-content">
                             @include('front.parts.post-content')

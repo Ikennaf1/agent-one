@@ -19,26 +19,24 @@ $defaults = getThemeDefaults();
             {{-- Nav --}}
             <div>
                 @include('front.parts.nav')
-                {{-- <div class="header-img">
-                    <img src="{{ homeUrl("/assets/img/pexels--931887.jpg", 0) }}"
-                    style="width: 100%; height: 100%; object-position: center; object-fit: cover;"
-                    alt="Header Image" />
-                </div> --}}
             </div>
 
-            <div class="flex flex-col gap-16">
+            <div class="flex flex-col gap-24">
                 {{-- Hero --}}
-                <div class="body-margin flex flex-wrap gap-24 justify-between items-center">
-                    <div class="flex flex-1 flex-col gap-8">
+                <div class="body-margin hero-section">
+                    <div class="hero-flex-1 hero-texts">
                         <span class="noto-sans-display-font text-4xl">{{settings('r', 'general.name')}}</span>
                         <span class="noto-sans-display-font font-bold">{{$defaults['tag-line']}}</span>
                         <span class="">{{$defaults['user-bio']}}</span>
                     </div>
-                    <div class="w-full flex-1 h-64 overflow-hidden">
-                        <img
-                            src="{{homeUrl('/assets/img/profile-picture.jpg', 0)}}"
-                            alt="{{Auth::user()->name}}"
-                            style="width: 100%; height: 100%; object-position: center; object-fit: cover;">
+                    <div class="hero-flex-1 hero-pic">
+                        <div class="hero-profile-picture">
+                            <img
+                             src="{{homeUrl('/assets/img/profile-picture.jpg', 0)}}"
+                             alt="{{Auth::user()->name}}"
+                             srcset=""
+                             style="width: 100%; height: 100%; object-position: center; object-fit: cover;">
+                        </div>
                     </div>
                 </div>
                 {{-- Main section --}}
@@ -59,18 +57,18 @@ $defaults = getThemeDefaults();
                                         <div class="post-title">
                                             <h4>{{ $post->title}}</h4>
                                         </div>
+                                        <span class="text-center">
+                                            <span class="post-category">{{ !empty($post->category) ? $post->category : 'No category' }}</span>
+                                        </span>
                                         <div class="post-desc">
                                             <p><?= $post->description != null
                                                 ? substr($post->description, 0, 75)
                                                 : substr($post->content, 0, 75) ?>
                                             </p>
                                         </div>
-                                        <div class="post-list-footer-sm">
-                                            <a class="md:hidden" href="{{ exportLink("/posts/$post->link") }}"><span>Read</span></a>
-                                        </div>
                                     </div>
-                                    <div class="hidden md:flex post-list-footer">
-                                        <a href="{{ exportLink("/posts/$post->link") }}"><span>Read</span></a>
+                                    <div class="post-list-footer">
+                                        <a href="{{ exportLink("/posts/$post->link") }}"><span class="read-link bordered-links">Read</span></a>
                                     </div>
                                 </div>
                             @endforeach
