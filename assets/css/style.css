@@ -605,6 +605,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 0.25rem;
 }
 
+.overflow-hidden{
+  overflow: hidden;
+}
+
 .rounded-lg{
   border-radius: 0.5rem;
 }
@@ -616,6 +620,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-gray-400{
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
+.border-primary-color{
+  border-color: var(--primary-color);
 }
 
 .bg-gray-200{
@@ -1054,9 +1062,15 @@ body {
   width: 100%;
 }
 
-@media (min-width: 1280px){
+@media (min-width: 768px){
   .post-content{
-    width: 72%;
+    width: 24rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .post-content{
+    width: 60%;
   }
 }
 
@@ -1069,13 +1083,17 @@ body {
 
 @media (min-width: 768px){
   .posts-list{
+    width: 24rem;
+  }
+
+  .posts-list{
     gap: 6rem;
   }
 }
 
 @media (min-width: 1024px){
   .posts-list{
-    width: 72%;
+    width: 60%;
   }
 
   .posts-list{
@@ -1274,12 +1292,19 @@ body {
 }
 
 .post-featured-img{
-  margin-right: auto;
-  height: auto;
-  width: auto;
-  max-width: 100%;
+  width: 100%;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+@media (min-width: 768px){
+  .post-featured-img{
+    width: 40%;
+  }
 }
 
 .post-content main a{
@@ -1302,6 +1327,8 @@ body {
   border-color: var(--primary-color);
   padding-top: 1rem;
   padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-align: center;
   font-style: italic;
 }
@@ -1335,25 +1362,26 @@ body {
 
 @media (min-width: 768px){
   .sidebar{
-    width: 20%;
+    width: 28%;
   }
 }
 
 .sidebar-container{
   height: 100%;
-  font-size: 0.75rem;
-  line-height: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .sidebar-widget-title{
-  border-left-width: 4px;
-  border-left-color: var(--primary-color);
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  background-color: var(--primary-color);
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
-  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  font-family: "Noto Sans Display", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wdth" 100;
 }
 
 .sidebar-widget-body{

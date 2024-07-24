@@ -7,7 +7,7 @@
         <div class="flex flex-col gap-2">
         @if (!empty($widgets))
             @foreach ($widgets as $widget)
-                <div class="flex flex-col gap-1">
+                <div class="flex flex-col gap-1 border rounded-lg border-primary-color overflow-hidden">
                     <div class="sidebar-widget-title">
                         {{ getWidgetTitle('right-sidebar', $widget->name) }}
                     </div>
