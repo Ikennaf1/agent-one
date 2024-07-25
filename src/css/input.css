@@ -227,12 +227,33 @@ body {
     @apply w-full md:w-[40%] overflow-hidden object-center object-cover rounded-lg;
 }
 
+.post-content main .article>p:first-of-type:first-letter {
+    float: left;
+    line-height: 85%;
+    font-size: 400%;
+    width: 0.7em;
+    clear: both;
+    @apply inline-block;
+}
+
 .post-content main a {
     @apply text-primary-color hover:text-primary-color-hover transition ease-in-out duration-500;
 }
 
 .post-content main blockquote {
     @apply w-full md:w-[60%] text-center italic border-b border-t py-4 px-4 border-primary-color;
+}
+
+.post-content main blockquote::before,.post-content main blockquote::after {
+    @apply block text-6xl;
+}
+
+.post-content main blockquote::before {
+    content: "\201C";
+}
+
+.post-content main blockquote::after {
+    content: "\201D";
 }
 
 .post-content main img {

@@ -1307,6 +1307,15 @@ body {
   }
 }
 
+.post-content main .article>p:first-of-type:first-letter {
+  float: left;
+  line-height: 85%;
+  font-size: 400%;
+  width: 0.7em;
+  clear: both;
+  display: inline-block;
+}
+
 .post-content main a{
   color: var(--primary-color);
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -1337,6 +1346,20 @@ body {
   .post-content main blockquote{
     width: 60%;
   }
+}
+
+.post-content main blockquote::before, .post-content main blockquote::after{
+  display: block;
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.post-content main blockquote::before {
+  content: "\201C";
+}
+
+.post-content main blockquote::after {
+  content: "\201D";
 }
 
 .post-content main img {

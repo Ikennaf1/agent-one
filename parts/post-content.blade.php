@@ -20,7 +20,7 @@
         </div>
 
         {{-- Post content --}}
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4 article">
             {!! $post->content !!}
         </div>
     </div>
