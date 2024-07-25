@@ -1083,10 +1083,6 @@ body {
 
 @media (min-width: 768px){
   .posts-list{
-    width: 24rem;
-  }
-
-  .posts-list{
     gap: 6rem;
   }
 }
@@ -1122,6 +1118,12 @@ body {
 }
 
 @media (min-width: 768px){
+  .post-container{
+    width: 16rem;
+  }
+}
+
+@media (min-width: 1024px){
   .post-container{
     width: 18rem;
   }
@@ -1384,6 +1386,12 @@ body {
 }
 
 @media (min-width: 768px){
+  .sidebar{
+    width: 48%;
+  }
+}
+
+@media (min-width: 1024px){
   .sidebar{
     width: 28%;
   }
