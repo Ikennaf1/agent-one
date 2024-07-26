@@ -110,6 +110,14 @@ body {
     @apply noto-sans-display-font md:hidden top-0 right-0 w-3/4 h-screen z-40 bg-primary-color p-3 font-light;
 }
 
+.blinds {
+    @apply hidden md:inline-block w-auto h-auto ml-auto text-white cursor-pointer;
+}
+
+.blinds-collapse {
+    @apply inline-block md:hidden w-auto h-auto text-white cursor-pointer;
+}
+
 .nav-collapsed {
     opacity: 0;
     transform: translateX(150%);

@@ -30,6 +30,7 @@
                             <li class="menu-item">{!! $menu !!}</li>
                         @endforeach
                     </ul>
+                    <div class="blinds" id="blinds_container_id"></div>
                     <div class="menu-mobile-btn" onclick="handleNav()">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
@@ -48,6 +49,7 @@
     <div class="flex flex-col gap-8">
         <div class="nav-collapsed-header">
             <a class="font-bold text-white" href="{{ homeUrl() }}"><span>{{ settings('r', 'general.name') }}</span></a>
+            <div id="blinds_container_collapse_id" class="blinds-collapse"></div>
             <label class="cursor-pointer" for="show_nav">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" view-box="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />

@@ -561,6 +561,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   cursor: pointer;
 }
 
+.resize{
+  resize: both;
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -961,6 +965,37 @@ body {
 
 @media (min-width: 768px){
   .nav-collapse{
+    display: none;
+  }
+}
+
+.blinds{
+  margin-left: auto;
+  display: none;
+  height: auto;
+  width: auto;
+  cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+  .blinds{
+    display: inline-block;
+  }
+}
+
+.blinds-collapse{
+  display: inline-block;
+  height: auto;
+  width: auto;
+  cursor: pointer;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+  .blinds-collapse{
     display: none;
   }
 }
