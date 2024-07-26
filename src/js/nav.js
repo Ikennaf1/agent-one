@@ -1,4 +1,5 @@
 var nav_menu_container_id = document.querySelector('#nav_menu_container_id');
+var heroSection = document.querySelector('#hero_section');
 var showNav = false;
 var label_nav_collapsed = document.querySelector('#label_nav_collapsed');
 var nav_collapsed = document.querySelector('#nav_collapsed');
@@ -35,10 +36,12 @@ window.onscroll = () => {
     if (y <= 144) {
         if (nav_menu_container_id.classList.contains('fixed')) {
             nav_menu_container_id.classList.remove('fixed', 'top-0');
+            heroSection.classList.remove('mt-24');
         }
     } else {
         if (!nav_menu_container_id.classList.contains('fixed')) {
             nav_menu_container_id.classList.add('fixed', 'top-0');
+            heroSection.classList.add('mt-24');
         }
     }
 }

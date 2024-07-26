@@ -23,7 +23,7 @@ $defaults = getThemeDefaults();
 
             <div class="flex flex-col gap-24">
                 {{-- Hero --}}
-                <div class="body-margin hero-section">
+                <div class="body-margin hero-section" id="hero_section">
                     <div class="hero-flex-1 hero-texts">
                         <span class="noto-sans-display-font text-4xl">{{settings('r', 'general.name')}}</span>
                         <span class="noto-sans-display-font font-bold">{{$defaults['tag-line']}}</span>
