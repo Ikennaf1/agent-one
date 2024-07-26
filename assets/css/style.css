@@ -1438,11 +1438,14 @@ body {
 
 .post-content main blockquote::before {
   content: "\201C";
+  display: block;
+  float: left;
+  clear: both;
 }
 
-.post-content main blockquote::after {
-  content: "\201D";
-}
+/* .post-content main blockquote::after {
+    content: "\201D";
+} */
 
 .post-content main img {
   float: left;
