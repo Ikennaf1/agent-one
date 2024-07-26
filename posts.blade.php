@@ -41,7 +41,7 @@ $defaults = getThemeDefaults();
                 </div>
                 {{-- Main section --}}
                 <div class="body-margin">
-                    <div class="flex flex-wrap gap-16 justify-between">
+                    <div class="flex flex-wrap gap-16 justify-between w-full">
                         {{-- Post content --}}
                         <div class="posts-list">
                             @foreach ($posts as $post)

@@ -13,6 +13,7 @@
     font-family: "Cormorant", serif;
     font-optical-sizing: auto;
     font-variation-settings: "wdth" 100;
+    font-size: 18px;
     --primary-color: #b4ad61;
     --primary-color-hover: #777340;
     --secondary-color: #b4ad61;
@@ -98,7 +99,7 @@ body {
 }
 
 .menu-bar {
-    @apply hidden md:flex gap-4 justify-end;
+    @apply hidden md:flex gap-12 justify-end;
 }
 
 .menu-mobile-btn {
@@ -147,7 +148,7 @@ body {
 }
 
 .hero-profile-picture {
-    @apply w-full h-56 lg:h-[24rem] overflow-hidden lg:shadow-lg;
+    @apply w-full h-56 lg:h-[22rem] overflow-hidden lg:shadow-lg;
 }
 
 .hero-accent {
@@ -155,15 +156,15 @@ body {
 }
 
 .post-content {
-    @apply w-full md:w-96 lg:w-[60%];
+    @apply md:flex-[3] lg:flex-[3];
 }
 
 .posts-list {
-    @apply w-full lg:w-[60%] flex gap-16 md:gap-24 lg:gap-12 xl:gap-32 flex-wrap;
+    @apply md:flex-[3] lg:flex-[3] flex justify-start flex-wrap gap-16 md:gap-8;
 }
 
 .post-container {
-    @apply flex gap-2 flex-col bg-white w-full md:w-64 lg:w-[45%] xl:w-72 h-[28rem] transition duration-500 overflow-hidden shadow-lg;
+    @apply flex gap-2 flex-col bg-white w-full md:w-full lg:w-[45%] xl:w-72 h-[28rem] transition duration-500 overflow-hidden shadow-lg;
 }
 
 .post-list-img {
@@ -199,8 +200,6 @@ body {
 }
 
 .post-content main p img {
-    /* width: 100%;
-    height: auto; */
     @apply m-auto;
 }
 
@@ -267,8 +266,11 @@ body {
     @apply w-full md:w-[40%] overflow-hidden object-center object-cover;
 }
 
-.sidebar {
+/* .sidebar {
     @apply w-full md:w-[48%] lg:w-[28%];
+} */
+.sidebar {
+    @apply w-full md:flex-[1];
 }
 
 .sidebar-container {
