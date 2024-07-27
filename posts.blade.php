@@ -12,6 +12,8 @@ $defaults = getThemeDefaults();
         <link rel="stylesheet" href="{{ homeUrl('/assets/css/style.css') }}">
         <script type="text/javascript" src="{{ homeUrl('/assets/js/script.js') }}" defer></script>
         <title>{{ settings('r', "general.name", "Nidavel") }} | Home</title>
+        {!!customizedStyles()!!}
+        {!! getHead() !!}
     </head>
 
     <body>
@@ -24,10 +26,10 @@ $defaults = getThemeDefaults();
             <div class="flex flex-col gap-24">
                 {{-- Hero --}}
                 <div class="body-margin hero-section" id="hero_section">
-                    <div class="hero-flex-1 hero-texts">
-                        <span class="noto-sans-display-font text-4xl">{{settings('r', 'general.name')}}</span>
-                        <span class="noto-sans-display-font font-bold">{{$defaults['tag-line']}}</span>
-                        <span class="">{{$defaults['user-bio']}}</span>
+                    <div class="hero-flex-1 hero-texts bg-content">
+                        <span class="noto-sans-display-font text-4xl dark-white">{{settings('r', 'general.name')}}</span>
+                        <span class="noto-sans-display-font font-bold dark-white">{{$defaults['tag-line']}}</span>
+                        <span class="text">{{$defaults['user-bio']}}</span>
                     </div>
                     <div class="hero-flex-1 hero-pic">
                         <div class="hero-profile-picture">
@@ -68,7 +70,7 @@ $defaults = getThemeDefaults();
                                         </div>
                                     </div>
                                     <div class="post-list-footer">
-                                        <a href="{{ exportLink("/posts/$post->link") }}"><span class="read-link bordered-links">Read</span></a>
+                                        <a href="{{ exportLink("/posts/$post->link") }}"><span class="read-link">Read</span></a>
                                     </div>
                                 </div>
                             @endforeach

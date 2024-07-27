@@ -10,20 +10,20 @@
 <nav class="nav">
     <div class="">
         <div class="">
-            <div class="body-margin flex h-36 primary-text-color justify-between items-center noto-sans-display-font">
+            <div class="body-margin flex h-36 primary-text-color justify-between items-center noto-sans-display-font text-primary">
                 <div class="">
                     <a href="{{ homeUrl() }}" class="flex link items-center gap-8 text-xl uppercase">
-                        <div class="w-20 h-20">
+                        <div class="w-20 h-20 text-primary">
                             <?php include_once './assets/img/logo.svg'; ?>
                         </div>
-                        <span>{{ dashToSpace(settings('r', 'general.name')) }}</span>
+                        <span class="text-primary">{{ dashToSpace(settings('r', 'general.name')) }}</span>
                     </a>
                 </div>
                 <div class="tag-line">
                     {{$defaults['tag-line']}}
                 </div>
             </div>
-            <div class="nav-menu-container" id="nav_menu_container_id">
+            <div class="nav-menu-container bg-primary" id="nav_menu_container_id">
                 <div class="body-margin nav-menu">
                     <ul class="menu-bar">
                         @foreach ($menus as $menu)
@@ -45,7 +45,7 @@
 <button id="show_nav" class="hidden" type="button" onclick="handleNav()"></button>
 
 <label id="label_nav_collapsed" for="show_nav" class="fixed top-0 w-full h-full bg-black z-40 opacity-70 transition duration-300 ease-in-out delay-500"></label>
-<div id="nav_collapsed" class="fixed nav-collapse">
+<div id="nav_collapsed" class="fixed nav-collapse bg-primary">
     <div class="flex flex-col gap-8">
         <div class="nav-collapsed-header">
             <a class="font-bold text-white" href="{{ homeUrl() }}"><span>{{ settings('r', 'general.name') }}</span></a>

@@ -69,3 +69,17 @@ function getThemeDefaults()
 registerSettingsForm('Agent one', 'agent_one', front_path('pages/settings.php'));
 
 registerWidgetArea('right-sidebar');
+
+customizeSelectors('agent_one', [
+    '.text-primary' => ['color'],
+    '.bg-primary' => ['background-color'],
+    '.border-primary' => ['border-color'],
+    '.post-category' => ['background-color'],
+    'a .read-link' => ['color', 'border-color'],
+    'a .read-link:hover' => ['color', 'border-color'],
+    '.link' => ['color'],
+    '.link:hover' => ['color'],
+    '.post-content main p a' => ['color'],
+    '.post-content main p a:hover' => ['color'],
+    '.post-content main blockquote' => ['border-color']
+]);

@@ -24,7 +24,7 @@
                 <div class="body-margin">
                     <div class="flex flex-wrap gap-16 justify-between">
                         {{-- Post content --}}
-                        <div class="post-content">
+                        <div class="post-content single-post-content">
                             @include('front.parts.post-content')
                         </div>
 
