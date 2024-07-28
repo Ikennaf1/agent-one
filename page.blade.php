@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', settings('r', 'general.locale')) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,9 +7,12 @@
         <link rel="stylesheet" href="{{ homeUrl('/assets/css/style.css', 1) }}">
         <script type="text/javascript" src="{{ homeUrl('/assets/js/script.js', 1) }}" defer></script>
         {!! postHead($post) !!}
+        {!!customizedStyles()!!}
+        {!! getHead() !!}
     </head>
 
     <body>
+        {!! startBody() !!}
         <div class="">
             {{-- Nav --}}
             <div>
@@ -19,9 +22,9 @@
             <div class="flex flex-col gap-16">
                 {{-- Main section --}}
                 <div class="body-margin">
-                    <div class="flex flex-wrap gap-16 justify-between mt-16">
+                    <div class="flex flex-wrap gap-16 justify-between">
                         {{-- Post content --}}
-                        <div class="post-content">
+                        <div class="post-content single-post-content">
                             @include('front.parts.post-content')
                         </div>
 
@@ -38,5 +41,6 @@
                 </div>
             </div>
         </div>
+        {!! endBody() !!}
     </body>
 </html>
