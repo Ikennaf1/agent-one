@@ -1,5 +1,5 @@
 <?php
-exportAssets();
+// exportAssets();
 $defaults = getThemeDefaults();
 ?>
 <!DOCTYPE html>
